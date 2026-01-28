@@ -18,6 +18,18 @@
 ### // 02_EXECUTION_LOG (EXPERIENCE)
 
 **RAISTONE CAPITAL** `[FINTECH]`
+
+> **ARCHITECTURAL RETROSPECTIVE:** *Architected and deployed a greenfield Event-Driven Microservices ecosystem on Azure to power high-volume fintech operations. The system leverages a decoupled, serverless-first approach to ensure high availability and precision during peak financial processing windows.*
+
+| **CATEGORY** | **RESOURCES UTILIZED** |
+| :--- | :--- |
+| **Compute** | Azure Functions (Ingress/Egress, Salesforce Integration), App Service (Angular UIs, .NET 8 Backend), WebJobs (Rate-limiting, Salesforce Sync) |
+| **Integration & Messaging** | Azure Service Bus (Microservice communication), API Management (APIM), SignalR Service (Real-time notifications) |
+| **Data & Storage** | Azure SQL Server, Azure Table Storage (Caching/JSON config), Blob Storage (Claim Check pattern) |
+| **Security & Identity** | Azure Entra ID (Internal SSO), Azure B2C (External/Partner Auth) |
+| **Networking & Delivery** | Azure Front Door, Azure Firewall, Private Endpoints, Azure VPN Gateway |
+| **Management & DevOps** | Azure Pipelines (CI/CD), Bicep (IaC), Application Insights, App Configuration, Log Analytics |
+
 **Senior Developer - Lead - Partner Integrations** | *Feb 2025 – Jan 2026*
 
 > **MISSION:** *Leading end-to-end development of the NetSuite Capital SuiteApp and backend integrations to enable seamless invoice financing.*
@@ -33,8 +45,6 @@
 * **`AUTOMATION`** Engineered the core automation logic to drastically reduce operational costs, decoupling trade volume growth from manual operational overhead.
 * **`LEDGER`** Designed the custom **ledger-based accounting system**, ensuring immutable financial tracking for high-volume trade finance workflows.
 * **`SCALE`** Built the engine on a robust **serverless** architecture to ensure high availability and precision during peak processing windows.
-
-<div style="page-break-after: always;"></div>
 
 **Senior Developer** | *June 2020 – Oct 2022*
 
@@ -53,6 +63,8 @@
 * **`MODERNIZATION`** Replaced legacy tracking methods with a centralized **Java/Kotlin** and **Angular** platform, ensuring accurate data availability for critical power infrastructure.
 * **`FULL_STACK`** Developed backend microservices and responsive frontend interfaces to visualize complex power generation asset hierarchies.
 * **`QUALITY`** Built proprietary API testing frameworks and maintained rigorous testing standards using **JUnit**, **Protractor**, and **Cypress** to ensure data integrity.
+
+<div style="page-break-after: always;"></div>
 
 **ANALYTIC STRATEGIES** `[DEFENSE]`
 **Software Test Automation Engineer** | *May 2016 – Nov 2016*
