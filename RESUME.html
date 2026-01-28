@@ -390,29 +390,29 @@ table {
 <tr>
 <th style="text-align:left"><strong>CORE STACK</strong></th>
 <th style="text-align:left"><strong>INFRASTRUCTURE (AZURE)</strong></th>
-<th style="text-align:left"><strong>DATA &amp; BACKEND</strong></th>
+<th style="text-align:left"><strong>DATA &amp; SECURITY</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">.NET Core / C#</td>
-<td style="text-align:left">Azure Functions / Bicep</td>
-<td style="text-align:left">Azure SQL Server</td>
+<td style="text-align:left">.NET 8 / C#</td>
+<td style="text-align:left">Functions / App Service / WebJobs</td>
+<td style="text-align:left">SQL Server / Table / Blob Storage</td>
 </tr>
 <tr>
 <td style="text-align:left">Java (Spring Boot)</td>
-<td style="text-align:left">Azure Service Bus</td>
-<td style="text-align:left">Oracle DB / Teradata</td>
+<td style="text-align:left">Service Bus / SignalR / APIM</td>
+<td style="text-align:left">Entra ID / B2C / Private Endpoints</td>
 </tr>
 <tr>
 <td style="text-align:left">Angular / TypeScript</td>
-<td style="text-align:left">Docker / Azure DevOps</td>
-<td style="text-align:left">SQL / PL-SQL</td>
+<td style="text-align:left">Front Door / Firewall / VPN Gateway</td>
+<td style="text-align:left">Docker / Azure DevOps / Pipelines</td>
 </tr>
 <tr>
 <td style="text-align:left">SuiteScript</td>
-<td style="text-align:left">Azure Pipelines</td>
-<td style="text-align:left">Microservices Design</td>
+<td style="text-align:left">Application Insights / Log Analytics</td>
+<td style="text-align:left">Bicep / Microservices / Event-Driven</td>
 </tr>
 </tbody>
 </table>
@@ -422,40 +422,18 @@ table {
 <blockquote>
 <p><strong>ARCHITECTURAL RETROSPECTIVE:</strong> <em>Architected and deployed a greenfield Event-Driven Microservices ecosystem on Azure to power high-volume fintech operations. The system leverages a decoupled, serverless-first approach to ensure high availability and precision during peak financial processing windows.</em></p>
 </blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:left"><strong>CATEGORY</strong></th>
-<th style="text-align:left"><strong>RESOURCES UTILIZED</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><strong>Compute</strong></td>
-<td style="text-align:left">Azure Functions (Ingress/Egress, Salesforce Integration), App Service (Angular UIs, .NET 8 Backend), WebJobs (Rate-limiting, Salesforce Sync)</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Integration &amp; Messaging</strong></td>
-<td style="text-align:left">Azure Service Bus (Microservice communication), API Management (APIM), SignalR Service (Real-time notifications)</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Data &amp; Storage</strong></td>
-<td style="text-align:left">Azure SQL Server, Azure Table Storage (Caching/JSON config), Blob Storage (Claim Check pattern)</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Security &amp; Identity</strong></td>
-<td style="text-align:left">Azure Entra ID (Internal SSO), Azure B2C (External/Partner Auth)</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Networking &amp; Delivery</strong></td>
-<td style="text-align:left">Azure Front Door, Azure Firewall, Private Endpoints, Azure VPN Gateway</td>
-</tr>
-<tr>
-<td style="text-align:left"><strong>Management &amp; DevOps</strong></td>
-<td style="text-align:left">Azure Pipelines (CI/CD), Bicep (IaC), Application Insights, App Configuration, Log Analytics</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li><strong><code>FRAMEWORKS</code></strong> Developed the core backend application using <strong>.NET 8</strong>, exposing a <strong>RESTful API</strong> to communicate with modern <strong>Angular</strong> SPA client portals and core processing UIs.</li>
+<li><strong><code>DATA</code></strong> Deployed <strong>Azure SQL Server</strong> for core data storage and utilized <strong>LLBLGen</strong> as a pre-compiled type-safe ORM. Leveraged <strong>Azure Table Storage</strong> for high-performance non-relational needs including ingestion hash deduplication, distributed token caching, and real-time execution logging.</li>
+<li><strong><code>SERVERLESS</code></strong> Utilized <strong>Azure Functions</strong> and <strong>WebJobs</strong> to handle high-volume ingress/egress and Salesforce synchronization with auto-scaling capabilities.</li>
+<li><strong><code>MESSAGING</code></strong> Implemented <strong>Azure Service Bus</strong> and <strong>SignalR</strong> to facilitate decoupled microservice communication and real-time user notifications. Designed <strong>Claim-Check</strong> patterns using <strong>Azure Blob Storage</strong> to efficiently process large file payloads across the distributed system.</li>
+<li><strong><code>CONFIGURATION</code></strong> Used <strong>Azure App Configuration</strong> to manage feature flags and centralized configuration, and implemented <strong>Azure Key Vault</strong> for secure credential storage.</li>
+<li><strong><code>SECURITY</code></strong> Secured the ecosystem using <strong>Azure Entra ID</strong> for internal SSO and <strong>Azure B2C</strong> for external partner authentication.</li>
+<li><strong><code>NETWORKING</code></strong> Deployed <strong>Azure Front Door</strong> and <strong>Private Endpoints</strong> network isolation, and <strong>Azure API Management</strong> to provide a professional developer-friendly API management and documentation portal.</li>
+<li><strong><code>MONITORING</code></strong> Utilized <strong>Application Insights</strong> for deep log telemetry analysis and configured <strong>Azure Alerts</strong> to trigger automated production support tickets in Jira for critical issues.</li>
+<li><strong><code>DEVOPS</code></strong> Established robust CI/CD pipelines with <strong>Azure Pipelines</strong> and <strong>Bicep</strong> for reproducible Infrastructure as Code deployments.</li>
+<li><strong><code>LEADERSHIP</code></strong> Led Agile ceremonies and streamlined delivery by pre-proofing technical requirements with data modeling/ERDs. Unblocked engineers and offshore teams by clarifying requirements, providing technical mentorship, and serving as the primary technical liaison to ensure code quality and project velocity. Conducted regular one-on-one engineer check-ins, provided performance review consultancy, and organized knowledge-sharing sessions and huddles to foster team growth.</li>
+</ul>
 <p><strong>Senior Developer - Lead - Partner Integrations</strong> | <em>Feb 2025 – Jan 2026</em></p>
 <blockquote>
 <p><strong>MISSION:</strong> <em>Leading end-to-end development of the NetSuite Capital SuiteApp and backend integrations to enable seamless invoice financing.</em></p>
@@ -494,7 +472,6 @@ table {
 <li><strong><code>FULL_STACK</code></strong> Developed backend microservices and responsive frontend interfaces to visualize complex power generation asset hierarchies.</li>
 <li><strong><code>QUALITY</code></strong> Built proprietary API testing frameworks and maintained rigorous testing standards using <strong>JUnit</strong>, <strong>Protractor</strong>, and <strong>Cypress</strong> to ensure data integrity.</li>
 </ul>
-<div style="page-break-after: always;"></div>
 <p><strong>ANALYTIC STRATEGIES</strong> <code>[DEFENSE]</code>
 <strong>Software Test Automation Engineer</strong> | <em>May 2016 – Nov 2016</em></p>
 <blockquote>

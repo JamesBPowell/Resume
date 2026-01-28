@@ -6,12 +6,13 @@
 
 ### // 01_SYSTEM_ARCHITECTURE (SKILLS)
 
-| **CORE STACK** | **INFRASTRUCTURE (AZURE)** | **DATA & BACKEND** |
-| :---                   | :---                         | :---                     |
-| .NET Core / C#         | Azure Functions / Bicep      | Azure SQL Server         |
-| Java (Spring Boot)     | Azure Service Bus            | Oracle DB / Teradata     |
-| Angular / TypeScript   | Docker / Azure DevOps        | SQL / PL-SQL             |
-| SuiteScript            | Azure Pipelines              | Microservices Design     |
+
+| **CORE STACK** | **INFRASTRUCTURE (AZURE)** | **DATA & SECURITY** |
+| :--- | :--- | :--- |
+| .NET 8 / C# | Functions / App Service / WebJobs | SQL Server / Table / Blob Storage |
+| Java (Spring Boot) | Service Bus / SignalR / APIM | Entra ID / B2C / Private Endpoints |
+| Angular / TypeScript | Front Door / Firewall / VPN Gateway | Docker / Azure DevOps / Pipelines |
+| SuiteScript | Application Insights / Log Analytics | Bicep / Microservices / Event-Driven |
 
 ---
 
@@ -21,14 +22,16 @@
 
 > **ARCHITECTURAL RETROSPECTIVE:** *Architected and deployed a greenfield Event-Driven Microservices ecosystem on Azure to power high-volume fintech operations. The system leverages a decoupled, serverless-first approach to ensure high availability and precision during peak financial processing windows.*
 
-| **CATEGORY** | **RESOURCES UTILIZED** |
-| :--- | :--- |
-| **Compute** | Azure Functions (Ingress/Egress, Salesforce Integration), App Service (Angular UIs, .NET 8 Backend), WebJobs (Rate-limiting, Salesforce Sync) |
-| **Integration & Messaging** | Azure Service Bus (Microservice communication), API Management (APIM), SignalR Service (Real-time notifications) |
-| **Data & Storage** | Azure SQL Server, Azure Table Storage (Caching/JSON config), Blob Storage (Claim Check pattern) |
-| **Security & Identity** | Azure Entra ID (Internal SSO), Azure B2C (External/Partner Auth) |
-| **Networking & Delivery** | Azure Front Door, Azure Firewall, Private Endpoints, Azure VPN Gateway |
-| **Management & DevOps** | Azure Pipelines (CI/CD), Bicep (IaC), Application Insights, App Configuration, Log Analytics |
+* **`FRAMEWORKS`** Developed the core backend application using **.NET 8**, exposing a **RESTful API** to communicate with modern **Angular** SPA client portals and core processing UIs.
+* **`DATA`** Deployed **Azure SQL Server** for core data storage and utilized **LLBLGen** as a pre-compiled type-safe ORM. Leveraged **Azure Table Storage** for high-performance non-relational needs including ingestion hash deduplication, distributed token caching, and real-time execution logging.
+* **`SERVERLESS`** Utilized **Azure Functions** and **WebJobs** to handle high-volume ingress/egress and Salesforce synchronization with auto-scaling capabilities.
+* **`MESSAGING`** Implemented **Azure Service Bus** and **SignalR** to facilitate decoupled microservice communication and real-time user notifications. Designed **Claim-Check** patterns using **Azure Blob Storage** to efficiently process large file payloads across the distributed system.
+* **`CONFIGURATION`** Used **Azure App Configuration** to manage feature flags and centralized configuration, and implemented **Azure Key Vault** for secure credential storage.
+* **`SECURITY`** Secured the ecosystem using **Azure Entra ID** for internal SSO and **Azure B2C** for external partner authentication.
+* **`NETWORKING`** Deployed **Azure Front Door** and **Private Endpoints** network isolation, and **Azure API Management** to provide a professional developer-friendly API management and documentation portal.
+* **`MONITORING`** Utilized **Application Insights** for deep log telemetry analysis and configured **Azure Alerts** to trigger automated production support tickets in Jira for critical issues.
+* **`DEVOPS`** Established robust CI/CD pipelines with **Azure Pipelines** and **Bicep** for reproducible Infrastructure as Code deployments.
+* **`LEADERSHIP`** Led Agile ceremonies and streamlined delivery by pre-proofing technical requirements with data modeling/ERDs. Unblocked engineers and offshore teams by clarifying requirements, providing technical mentorship, and serving as the primary technical liaison to ensure code quality and project velocity. Conducted regular one-on-one engineer check-ins, provided performance review consultancy, and organized knowledge-sharing sessions and huddles to foster team growth.
 
 **Senior Developer - Lead - Partner Integrations** | *Feb 2025 – Jan 2026*
 
@@ -54,6 +57,8 @@
 * **`INTEGRATION`** Built automated partner integrations (**SAP Ariba, C2FO, NetSuite**) to drive lead generation and document gathering, directly decreasing new customer acquisition costs.
 * **`RECOGNITION`** Technical lead for the SAP Ariba integration project, recognized as an **SAP Pinnacle Awards Finalist**.
 
+<div style="page-break-after: always;"></div>
+
 **GENERAL ELECTRIC (GE DIGITAL)** `[INDUSTRIAL_IOT]`
 **Software Engineer** | *Nov 2016 – June 2020*
 
@@ -63,8 +68,6 @@
 * **`MODERNIZATION`** Replaced legacy tracking methods with a centralized **Java/Kotlin** and **Angular** platform, ensuring accurate data availability for critical power infrastructure.
 * **`FULL_STACK`** Developed backend microservices and responsive frontend interfaces to visualize complex power generation asset hierarchies.
 * **`QUALITY`** Built proprietary API testing frameworks and maintained rigorous testing standards using **JUnit**, **Protractor**, and **Cypress** to ensure data integrity.
-
-<div style="page-break-after: always;"></div>
 
 **ANALYTIC STRATEGIES** `[DEFENSE]`
 **Software Test Automation Engineer** | *May 2016 – Nov 2016*
