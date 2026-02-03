@@ -20,6 +20,8 @@
 
 **RAISTONE CAPITAL** `[FINTECH]`
 
+> **IMPACT:** *Slash customer acquisition costs via award-winning embedded integrations (SAP Pinnacle Award Finalist). Engineered a 10x increase in operational throughput capacity. High-volume individual contributor, authoring ~30% of the total codebase within a 12-engineer team.*
+
 > **ARCHITECTURAL RETROSPECTIVE:** *Architected and deployed a greenfield Event-Driven Microservices ecosystem on Azure to power high-volume fintech operations. The system leverages a decoupled, serverless-first approach to ensure high availability and precision during peak financial processing windows.*
 
 * **`FRAMEWORKS`** Developed the core backend application using **.NET 8**, exposing a **RESTful API** to communicate with modern **Angular** SPA client portals and core processing UIs.
