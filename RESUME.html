@@ -1,582 +1,506 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>RESUME.md</title>
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<title>RESUME.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
-	<style>
-		/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
-		/*---------------------------------------------------------------------------------------------
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-		body {
-			font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
-			font-size: var(--vscode-markdown-font-size, 14px);
-			padding: 0 26px;
-			line-height: var(--vscode-markdown-line-height, 22px);
-			word-wrap: break-word;
-		}
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
 
-		#code-csp-warning {
-			position: fixed;
-			top: 0;
-			right: 0;
-			color: white;
-			margin: 16px;
-			text-align: center;
-			font-size: 12px;
-			font-family: sans-serif;
-			background-color: #444444;
-			cursor: pointer;
-			padding: 6px;
-			box-shadow: 1px 1px 1px rgba(0, 0, 0, .25);
-		}
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
 
-		#code-csp-warning:hover {
-			text-decoration: none;
-			background-color: #007acc;
-			box-shadow: 2px 2px 2px rgba(0, 0, 0, .25);
-		}
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
 
-		body.scrollBeyondLastLine {
-			margin-bottom: calc(100vh - 22px);
-		}
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
 
-		body.showEditorSelection .code-line {
-			position: relative;
-		}
+body.showEditorSelection .code-line {
+	position: relative;
+}
 
-		body.showEditorSelection .code-active-line:before,
-		body.showEditorSelection .code-line:hover:before {
-			content: "";
-			display: block;
-			position: absolute;
-			top: 0;
-			left: -12px;
-			height: 100%;
-		}
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
 
-		body.showEditorSelection li.code-active-line:before,
-		body.showEditorSelection li.code-line:hover:before {
-			left: -30px;
-		}
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
 
-		.vscode-light.showEditorSelection .code-active-line:before {
-			border-left: 3px solid rgba(0, 0, 0, 0.15);
-		}
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
 
-		.vscode-light.showEditorSelection .code-line:hover:before {
-			border-left: 3px solid rgba(0, 0, 0, 0.40);
-		}
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
 
-		.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-			border-left: none;
-		}
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
 
-		.vscode-dark.showEditorSelection .code-active-line:before {
-			border-left: 3px solid rgba(255, 255, 255, 0.4);
-		}
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
 
-		.vscode-dark.showEditorSelection .code-line:hover:before {
-			border-left: 3px solid rgba(255, 255, 255, 0.60);
-		}
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
 
-		.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-			border-left: none;
-		}
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
 
-		.vscode-high-contrast.showEditorSelection .code-active-line:before {
-			border-left: 3px solid rgba(255, 160, 0, 0.7);
-		}
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
 
-		.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-			border-left: 3px solid rgba(255, 160, 0, 1);
-		}
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
 
-		.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-			border-left: none;
-		}
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
 
-		img {
-			max-width: 100%;
-			max-height: 100%;
-		}
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
 
-		a {
-			text-decoration: none;
-		}
+a {
+	text-decoration: none;
+}
 
-		a:hover {
-			text-decoration: underline;
-		}
+a:hover {
+	text-decoration: underline;
+}
 
-		a:focus,
-		input:focus,
-		select:focus,
-		textarea:focus {
-			outline: 1px solid -webkit-focus-ring-color;
-			outline-offset: -1px;
-		}
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
 
-		hr {
-			border: 0;
-			height: 2px;
-			border-bottom: 2px solid;
-		}
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
 
-		h1 {
-			padding-bottom: 0.3em;
-			line-height: 1.2;
-			border-bottom-width: 1px;
-			border-bottom-style: solid;
-		}
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
 
-		h1,
-		h2,
-		h3 {
-			font-weight: normal;
-		}
+h1, h2, h3 {
+	font-weight: normal;
+}
 
-		table {
-			border-collapse: collapse;
-		}
+table {
+	border-collapse: collapse;
+}
 
-		table>thead>tr>th {
-			text-align: left;
-			border-bottom: 1px solid;
-		}
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
 
-		table>thead>tr>th,
-		table>thead>tr>td,
-		table>tbody>tr>th,
-		table>tbody>tr>td {
-			padding: 5px 10px;
-		}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
 
-		table>tbody>tr+tr>td {
-			border-top: 1px solid;
-		}
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
 
-		blockquote {
-			margin: 0 7px 0 5px;
-			padding: 0 16px 0 10px;
-			border-left-width: 5px;
-			border-left-style: solid;
-		}
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
 
-		code {
-			font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-			font-size: 1em;
-			line-height: 1.357em;
-		}
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
 
-		body.wordWrap pre {
-			white-space: pre-wrap;
-		}
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
 
-		pre:not(.hljs),
-		pre.hljs code>div {
-			padding: 16px;
-			border-radius: 3px;
-			overflow: auto;
-		}
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
 
-		pre code {
-			color: var(--vscode-editor-foreground);
-			tab-size: 4;
-		}
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
 
-		/** Theming */
+/** Theming */
 
-		.vscode-light pre {
-			background-color: rgba(220, 220, 220, 0.4);
-		}
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
 
-		.vscode-dark pre {
-			background-color: rgba(10, 10, 10, 0.4);
-		}
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
 
-		.vscode-high-contrast pre {
-			background-color: rgb(0, 0, 0);
-		}
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
 
-		.vscode-high-contrast h1 {
-			border-color: rgb(0, 0, 0);
-		}
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
 
-		.vscode-light table>thead>tr>th {
-			border-color: rgba(0, 0, 0, 0.69);
-		}
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
 
-		.vscode-dark table>thead>tr>th {
-			border-color: rgba(255, 255, 255, 0.69);
-		}
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
 
-		.vscode-light h1,
-		.vscode-light hr,
-		.vscode-light table>tbody>tr+tr>td {
-			border-color: rgba(0, 0, 0, 0.18);
-		}
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
 
-		.vscode-dark h1,
-		.vscode-dark hr,
-		.vscode-dark table>tbody>tr+tr>td {
-			border-color: rgba(255, 255, 255, 0.18);
-		}
-	</style>
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
 
-	<style>
-		/* Tomorrow Theme */
-		/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-		/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+</style>
 
-		/* Tomorrow Comment */
-		.hljs-comment,
-		.hljs-quote {
-			color: #8e908c;
-		}
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
 
-		/* Tomorrow Red */
-		.hljs-variable,
-		.hljs-template-variable,
-		.hljs-tag,
-		.hljs-name,
-		.hljs-selector-id,
-		.hljs-selector-class,
-		.hljs-regexp,
-		.hljs-deletion {
-			color: #c82829;
-		}
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
 
-		/* Tomorrow Orange */
-		.hljs-number,
-		.hljs-built_in,
-		.hljs-builtin-name,
-		.hljs-literal,
-		.hljs-type,
-		.hljs-params,
-		.hljs-meta,
-		.hljs-link {
-			color: #f5871f;
-		}
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
 
-		/* Tomorrow Yellow */
-		.hljs-attribute {
-			color: #eab700;
-		}
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
 
-		/* Tomorrow Green */
-		.hljs-string,
-		.hljs-symbol,
-		.hljs-bullet,
-		.hljs-addition {
-			color: #718c00;
-		}
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
 
-		/* Tomorrow Blue */
-		.hljs-title,
-		.hljs-section {
-			color: #4271ae;
-		}
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
 
-		/* Tomorrow Purple */
-		.hljs-keyword,
-		.hljs-selector-tag {
-			color: #8959a8;
-		}
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
 
-		.hljs {
-			display: block;
-			overflow-x: auto;
-			color: #4d4d4c;
-			padding: 0.5em;
-		}
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
 
-		.hljs-emphasis {
-			font-style: italic;
-		}
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
 
-		.hljs-strong {
-			font-weight: bold;
-		}
-	</style>
+.hljs-emphasis {
+	font-style: italic;
+}
 
-	<style>
-		/*
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
  * Markdown PDF CSS
  */
 
-		body {
-			font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-			padding: 0 12px;
-		}
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
 
-		pre {
-			background-color: #f8f8f8;
-			border: 1px solid #cccccc;
-			border-radius: 3px;
-			overflow-x: auto;
-			white-space: pre-wrap;
-			overflow-wrap: break-word;
-		}
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
 
-		pre:not(.hljs) {
-			padding: 23px;
-			line-height: 19px;
-		}
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
 
-		h3 {
-			margin-top: 2em;
-			padding: 0.5em 1em;
-			background-color: #f1f3f4;
-			border-left: 5px solid darkred;
-			border-radius: 0 4px 4px 0;
-		}
+h3 {
+    margin-top: 2em;
+    padding: 0.5em 1em;
+    background-color: #f1f3f4;
+    border-left: 5px solid darkred;
+    border-radius: 0 4px 4px 0;
+}
 
-		blockquote {
-			background: rgba(127, 127, 127, 0.1);
-			border-color: rgba(0, 122, 204, 0.5);
-		}
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
 
-		.emoji {
-			height: 1.4em;
-		}
+.emoji {
+	height: 1.4em;
+}
 
-		code {
-			font-size: 14px;
-			line-height: 19px;
-		}
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
 
-		/* for inline code */
-		:not(pre):not(.hljs)>code {
-			color: #8b0000;
-			/* Change the old color so it seems less like an error */
-			background: rgba(127, 127, 127, 0.1);
-			font-size: inherit;
-		}
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #8b0000; /* Change the old color so it seems less like an error */
+	background: rgba(127, 127, 127, 0.1);
+	font-size: inherit;
+}
 
-		/* Page Break : use <div class="page"/> to insert page break
+/* Page Break : use <div class="page"/> to insert page break
 -------------------------------------------------------- */
-		.page {
-			page-break-after: always;
-		}
+.page {
+	page-break-after: always;
+}
 
-		table {
-			width: 100%;
-			border-collapse: collapse;
-			margin: 1.5em 0;
-			font-size: 14px;
-		}
-	</style>
+table {
+    	width: 100%;
+    	border-collapse: collapse;
+    	margin: 1.5em 0;
+    	font-size: 14px;
+}
+</style>
 
-	<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </head>
-
 <body>
-	<script>
-		mermaid.initialize({
-			startOnLoad: true,
-			theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-				? 'dark'
-				: 'default'
-		});
-	</script>
-	<h1 id="systemprofile-james-b-powell">[SYSTEM_PROFILE]: JAMES B. POWELL</h1>
-	<p><code>ROLE: SENIOR SOFTWARE ENGINEER</code>
-		<code>LOC: NEW ORLEANS, LA</code> | <code>WEB: LINKEDIN.COM/IN/JAMES-B-POWELL</code> |
-		<code>MAIL: JAMES.POWELL@ALUMNI.LSU.EDU</code> | <code>TEL: 985-774-5971</code>
-	</p>
-	<hr>
-	<h3 id="01systemarchitecture-skills">// 01_SYSTEM_ARCHITECTURE (SKILLS)</h3>
-	<table>
-		<thead>
-			<tr>
-				<th style="text-align:left"><strong>CORE STACK</strong></th>
-				<th style="text-align:left"><strong>INFRASTRUCTURE (AZURE)</strong></th>
-				<th style="text-align:left"><strong>DATA &amp; SECURITY</strong></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td style="text-align:left">.NET 8 / C#</td>
-				<td style="text-align:left">Functions / App Service / WebJobs</td>
-				<td style="text-align:left">SQL Server / Table / Blob Storage</td>
-			</tr>
-			<tr>
-				<td style="text-align:left">Java (Spring Boot)</td>
-				<td style="text-align:left">Service Bus / SignalR / APIM</td>
-				<td style="text-align:left">Entra ID / B2C / Private Endpoints</td>
-			</tr>
-			<tr>
-				<td style="text-align:left">Angular / TypeScript</td>
-				<td style="text-align:left">Front Door / Firewall / VPN Gateway</td>
-				<td style="text-align:left">Docker / Azure DevOps / Pipelines</td>
-			</tr>
-			<tr>
-				<td style="text-align:left">SuiteScript</td>
-				<td style="text-align:left">Application Insights / Log Analytics</td>
-				<td style="text-align:left">Bicep / Microservices / Event-Driven</td>
-			</tr>
-		</tbody>
-	</table>
-	<hr>
-	<h3 id="02executionlog-experience">// 02_EXECUTION_LOG (EXPERIENCE)</h3>
-	<p><strong>RAISTONE CAPITAL</strong> <code>[FINTECH]</code></p>
-	<blockquote>
-		<p><strong>IMPACT:</strong> <em>Slash customer acquisition costs via award-winning embedded integrations (SAP
-				Pinnacle Award Finalist). Engineered a 10x increase in operational throughput capacity. High-volume
-				individual contributor, authoring ~30% of the total codebase within a 12-engineer team.</em></p>
-	</blockquote>
-	<blockquote>
-		<p><strong>ARCHITECTURAL RETROSPECTIVE:</strong> <em>Architected and deployed a greenfield Event-Driven
-				Microservices ecosystem on Azure to power high-volume fintech operations. The system leverages a
-				decoupled, serverless-first approach to ensure high availability and precision during peak financial
-				processing windows.</em></p>
-	</blockquote>
-	<ul>
-		<li><strong><code>FRAMEWORKS</code></strong> Developed the core backend application using <strong>.NET
-				8</strong>, exposing a <strong>RESTful API</strong> to communicate with modern <strong>Angular</strong>
-			SPA client portals and core processing UIs.</li>
-		<li><strong><code>DATA</code></strong> Deployed <strong>Azure SQL Server</strong> for core data storage and
-			utilized <strong>LLBLGen</strong> as a pre-compiled type-safe ORM. Leveraged <strong>Azure Table
-				Storage</strong> for high-performance non-relational needs including ingestion hash deduplication,
-			distributed token caching, and real-time execution logging.</li>
-		<li><strong><code>SERVERLESS</code></strong> Utilized <strong>Azure Functions</strong> and
-			<strong>WebJobs</strong> to handle high-volume ingress/egress and Salesforce synchronization with
-			auto-scaling capabilities.
-		</li>
-		<li><strong><code>MESSAGING</code></strong> Implemented <strong>Azure Service Bus</strong> and
-			<strong>SignalR</strong> to facilitate decoupled microservice communication and real-time user
-			notifications. Designed <strong>Claim-Check</strong> patterns using <strong>Azure Blob Storage</strong> to
-			efficiently process large file payloads across the distributed system.
-		</li>
-		<li><strong><code>CONFIGURATION</code></strong> Used <strong>Azure App Configuration</strong> to manage feature
-			flags and centralized configuration, and implemented <strong>Azure Key Vault</strong> for secure credential
-			storage.</li>
-		<li><strong><code>SECURITY</code></strong> Secured the ecosystem using <strong>Azure Entra ID</strong> for
-			internal SSO and <strong>Azure B2C</strong> for external partner authentication.</li>
-		<li><strong><code>NETWORKING</code></strong> Deployed <strong>Azure Front Door</strong> and <strong>Private
-				Endpoints</strong> network isolation, and <strong>Azure API Management</strong> to provide a
-			professional developer-friendly API management and documentation portal.</li>
-		<li><strong><code>MONITORING</code></strong> Utilized <strong>Application Insights</strong> for deep log
-			telemetry analysis and configured <strong>Azure Alerts</strong> to trigger automated production support
-			tickets in Jira for critical issues.</li>
-		<li><strong><code>DEVOPS</code></strong> Established robust CI/CD pipelines with <strong>Azure
-				Pipelines</strong> and <strong>Bicep</strong> for reproducible Infrastructure as Code deployments.</li>
-		<li><strong><code>LEADERSHIP</code></strong> Led Agile ceremonies and streamlined delivery by pre-proofing
-			technical requirements with data modeling/ERDs. Unblocked engineers and offshore teams by clarifying
-			requirements, providing technical mentorship, and serving as the primary technical liaison to ensure code
-			quality and project velocity. Conducted regular one-on-one engineer check-ins, provided performance review
-			consultancy, and organized knowledge-sharing sessions and huddles to foster team growth.</li>
-	</ul>
-	<p><strong>Senior Developer - Lead - Partner Integrations</strong> | <em>Feb 2025 – Jan 2026</em></p>
-	<blockquote>
-		<p><strong>MISSION:</strong> <em>Leading end-to-end development of the NetSuite Capital SuiteApp and backend
-				integrations to enable seamless invoice financing.</em></p>
-	</blockquote>
-	<ul>
-		<li><strong><code>PLATFORM</code></strong> Led design and implementation of a scalable backend integration
-			platform built on <strong>.NET 8</strong> and <strong>Azure Functions</strong>, enabling secure, high-volume
-			invoice financing workflows between NetSuite and Raistone.</li>
-		<li><strong><code>ARCHITECTURE</code></strong> Architected and owned the serverless integration layer
-			responsible for orchestration, validation, and lifecycle management of financing transactions initiated from
-			the <strong>NetSuite Capital SuiteApp</strong>.</li>
-		<li><strong><code>AUTOMATION</code></strong> Designed and implemented event-driven accounting automation to
-			synchronize invoices, payments, and deposits, ensuring accurate reconciliation across distributed financial
-			systems.</li>
-		<li><strong><code>LEADERSHIP</code></strong> Served as technical lead for the <strong>NetSuite Capital
-				SuiteApp</strong>, aligning <strong>SuiteScript</strong> and <strong>REST</strong> integrations with
-			backend services and enforcing integration contracts and data integrity.</li>
-	</ul>
-	<p><strong>Senior Developer - Lead - Core Processing Engine</strong> | <em>Oct 2022 – Feb 2025</em></p>
-	<blockquote>
-		<p><strong>MISSION:</strong> <em>End-to-end development of the Core Processing Engine—a bespoke, ledger-based
-				trade finance accounting workflow tool.</em></p>
-	</blockquote>
-	<ul>
-		<li><strong><code>FULL_STACK</code></strong> Led end-to-end development of a <strong>.NET 8</strong>
-			<strong>Azure Application Service</strong> powering a bespoke, ledger-based trade finance accounting engine,
-			with an <strong>Angular</strong> UI backed by a <strong>RESTful API</strong>.</li>
-		<li><strong><code>AUTOMATION</code></strong> Architected and implemented the core automation and processing
-			logic to drastically reduce operational costs, decoupling trade volume growth from manual operations.</li>
-		<li><strong><code>LEDGER</code></strong> Designed a custom <strong>immutable ledger system</strong> to ensure
-			accurate, auditable financial tracking across high-volume trade finance workflows.</li>
-		<li><strong><code>REAL_TIME</code></strong> Implemented real-time system feedback and state propagation using
-			<strong>Azure SignalR</strong>, enabling responsive UI updates during peak processing and settlement
-			windows.</li>
-	</ul>
-	<p><strong>Senior Developer</strong> | <em>June 2020 – Oct 2022</em></p>
-	<blockquote>
-		<p><strong>MISSION:</strong> <em>Realized a greenfield Azure .NET infrastructure build-out to support the custom
-				software needs of a growing trade finance Fintech.</em></p>
-	</blockquote>
-	<ul>
-		<li><strong><code>GREENFIELD</code></strong> Architected the initial <strong>Azure .NET</strong> infrastructure
-			from the ground up, establishing the foundation for all subsequent trade finance custom software.</li>
-		<li><strong><code>INTEGRATION</code></strong> Built automated partner integrations (<strong>SAP Ariba, C2FO,
-				NetSuite</strong>) to drive lead generation and document gathering, directly decreasing new customer
-			acquisition costs.</li>
-		<li><strong><code>RECOGNITION</code></strong> Technical lead for the SAP Ariba integration project, recognized
-			as an <strong>SAP Pinnacle Awards Finalist</strong>.</li>
-	</ul>
-	<div style="page-break-after: always;"></div>
-	<p><strong>GENERAL ELECTRIC (GE DIGITAL)</strong> <code>[INDUSTRIAL_IOT]</code>
-		<strong>Software Engineer</strong> | <em>Nov 2016 – June 2020</em>
-	</p>
-	<blockquote>
-		<p><strong>MISSION:</strong> <em>Modernizing GE Power equipment tracking by building a temporal asset-attribute
-				management tool to enable predictive maintenance.</em></p>
-	</blockquote>
-	<ul>
-		<li><strong><code>TEMPORAL_DATA</code></strong> Engineered a complex <strong>temporal asset management
-				system</strong>, enabling precise tracking of historic equipment configurations to analyze failures and
-			predict maintenance needs.</li>
-		<li><strong><code>MODERNIZATION</code></strong> Replaced legacy tracking methods with a centralized
-			<strong>Java/Kotlin</strong> and <strong>Angular</strong> platform, ensuring accurate data availability for
-			critical power infrastructure.
-		</li>
-		<li><strong><code>FULL_STACK</code></strong> Developed backend microservices and responsive frontend interfaces
-			to visualize complex power generation asset hierarchies.</li>
-		<li><strong><code>QUALITY</code></strong> Built proprietary API testing frameworks and maintained rigorous
-			testing standards using <strong>JUnit</strong>, <strong>Protractor</strong>, and <strong>Cypress</strong> to
-			ensure data integrity.</li>
-	</ul>
-	<p><strong>ANALYTIC STRATEGIES</strong> <code>[DEFENSE]</code>
-		<strong>Software Test Automation Engineer</strong> | <em>May 2016 – Nov 2016</em>
-	</p>
-	<blockquote>
-		<p><strong>MISSION:</strong> <em>Modernization of US Navy software systems via automated quality assurance.</em>
-		</p>
-	</blockquote>
-	<ul>
-		<li><strong><code>AUTOMATION</code></strong> Developed automated functional tests using <strong>Java, JUnit, and
-				Selenium</strong> in a secure SCRUM environment.</li>
-	</ul>
-	<p><strong>JACOBS ENGINEERING GROUP</strong> <code>[ENERGY]</code>
-		<strong>Project Engineer</strong> | <em>Sept 2011 – April 2015</em>
-	</p>
-	<blockquote>
-		<p><strong>MISSION:</strong> <em>Lead engineering for major subsea tie-back projects and offshore rig
-				installations.</em></p>
-	</blockquote>
-	<ul>
-		<li><strong><code>LEADERSHIP</code></strong> Mechanical engineering lead for blast wall installation projects on
-			large offshore oil rigs.</li>
-		<li><strong><code>MANAGEMENT</code></strong> Coordinated multiple engineering roles for subsea infrastructure
-			projects.</li>
-	</ul>
-	<hr>
-	<h3 id="03kernelinfo-education">// 03_KERNEL_INFO (EDUCATION)</h3>
-	<p><strong>THE IRON YARD</strong>
-		<code>Immersive Full Stack Engineering (Java), 2016</code>
-	</p>
-	<p><strong>LOUISIANA STATE UNIVERSITY</strong>
-		<code>B.S. Mechanical Engineering</code>
-	</p>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="systemprofile-james-b-powell">[SYSTEM_PROFILE]: JAMES B. POWELL</h1>
+<p><code>ROLE: SENIOR SOFTWARE ENGINEER</code>
+<code>LOC: NEW ORLEANS, LA</code> | <code>WEB: LINKEDIN.COM/IN/JAMES-B-POWELL</code> | <code>MAIL: JAMES.POWELL@ALUMNI.LSU.EDU</code> | <code>TEL: 985-774-5971</code></p>
+<hr>
+<h3 id="01systemarchitecture-skills">// 01_SYSTEM_ARCHITECTURE (SKILLS)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>CORE STACK</strong></th>
+<th style="text-align:left"><strong>INFRASTRUCTURE (AZURE)</strong></th>
+<th style="text-align:left"><strong>DATA &amp; SECURITY</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">.NET 8 / C#</td>
+<td style="text-align:left">Functions / App Service / WebJobs</td>
+<td style="text-align:left">SQL Server / Table / Blob Storage</td>
+</tr>
+<tr>
+<td style="text-align:left">Java (Spring Boot)</td>
+<td style="text-align:left">Service Bus / SignalR / APIM</td>
+<td style="text-align:left">Entra ID / B2C / Private Endpoints</td>
+</tr>
+<tr>
+<td style="text-align:left">Angular / TypeScript</td>
+<td style="text-align:left">Front Door / Firewall / VPN Gateway</td>
+<td style="text-align:left">Docker / Azure DevOps / Pipelines</td>
+</tr>
+<tr>
+<td style="text-align:left">SuiteScript</td>
+<td style="text-align:left">Application Insights / Log Analytics</td>
+<td style="text-align:left">Bicep / Microservices / Event-Driven</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="02executionlog-experience">// 02_EXECUTION_LOG (EXPERIENCE)</h3>
+<p><strong>RAISTONE CAPITAL</strong> <code>[FINTECH]</code></p>
+<blockquote>
+<p><strong>IMPACT:</strong> <em>Slash customer acquisition costs via award-winning embedded integrations (SAP Pinnacle Award Finalist). Engineered a 10x increase in operational throughput capacity. High-volume individual contributor, authoring ~30% of the total codebase within a 12-engineer team.</em></p>
+</blockquote>
+<blockquote>
+<p><strong>ARCHITECTURAL RETROSPECTIVE:</strong> <em>Architected and deployed a greenfield Event-Driven Microservices ecosystem on Azure to power high-volume fintech operations. The system leverages a decoupled, serverless-first approach to ensure high availability and precision during peak financial processing windows.</em></p>
+</blockquote>
+<ul>
+<li><strong><code>FRAMEWORKS</code></strong> Developed the core backend application using <strong>.NET 8</strong>, exposing a <strong>RESTful API</strong> to communicate with modern <strong>Angular</strong> SPA client portals and core processing UIs.</li>
+<li><strong><code>DATA</code></strong> Deployed <strong>Azure SQL Server</strong> for core data storage and utilized <strong>LLBLGen</strong> as a pre-compiled type-safe ORM. Leveraged <strong>Azure Table Storage</strong> for high-performance non-relational needs including ingestion hash deduplication, distributed token caching, and real-time execution logging.</li>
+<li><strong><code>SERVERLESS</code></strong> Utilized <strong>Azure Functions</strong> and <strong>WebJobs</strong> to handle high-volume ingress/egress and Salesforce synchronization with auto-scaling capabilities.</li>
+<li><strong><code>MESSAGING</code></strong> Implemented <strong>Azure Service Bus</strong> and <strong>SignalR</strong> to facilitate decoupled microservice communication and real-time user notifications. Designed <strong>Claim-Check</strong> patterns using <strong>Azure Blob Storage</strong> to efficiently process large file payloads across the distributed system.</li>
+<li><strong><code>CONFIGURATION</code></strong> Used <strong>Azure App Configuration</strong> to manage feature flags and centralized configuration, and implemented <strong>Azure Key Vault</strong> for secure credential storage.</li>
+<li><strong><code>SECURITY</code></strong> Secured the ecosystem using <strong>Azure Entra ID</strong> for internal SSO and <strong>Azure B2C</strong> for external partner authentication.</li>
+<li><strong><code>NETWORKING</code></strong> Deployed <strong>Azure Front Door</strong> and <strong>Private Endpoints</strong> network isolation, and <strong>Azure API Management</strong> to provide a professional developer-friendly API management and documentation portal.</li>
+<li><strong><code>MONITORING</code></strong> Utilized <strong>Application Insights</strong> for deep log telemetry analysis and configured <strong>Azure Alerts</strong> to trigger automated production support tickets in Jira for critical issues.</li>
+<li><strong><code>DEVOPS</code></strong> Established robust CI/CD pipelines with <strong>Azure Pipelines</strong> and <strong>Bicep</strong> for reproducible Infrastructure as Code deployments.</li>
+<li><strong><code>LEADERSHIP</code></strong> Led Agile ceremonies and streamlined delivery by pre-proofing technical requirements with data modeling/ERDs. Unblocked engineers and offshore teams by clarifying requirements, providing technical mentorship, and serving as the primary technical liaison to ensure code quality and project velocity. Conducted regular one-on-one engineer check-ins, provided performance review consultancy, and organized knowledge-sharing sessions and huddles to foster team growth.</li>
+</ul>
+<p><strong>Senior Developer - Lead - Partner Integrations</strong> | <em>Feb 2025 – Jan 2026</em></p>
+<blockquote>
+<p><strong>MISSION:</strong> <em>Leading end-to-end development of the NetSuite Capital SuiteApp and backend integrations to enable seamless invoice financing.</em></p>
+</blockquote>
+<ul>
+<li><strong><code>PLATFORM</code></strong> Led design and implementation of a scalable backend integration platform built on <strong>.NET 8</strong> and <strong>Azure Functions</strong>, enabling secure, high-volume invoice financing workflows between NetSuite and Raistone.</li>
+<li><strong><code>ARCHITECTURE</code></strong> Architected and owned the serverless integration layer responsible for orchestration, validation, and lifecycle management of financing transactions initiated from the <strong>NetSuite Capital SuiteApp</strong>.</li>
+<li><strong><code>AUTOMATION</code></strong> Designed and implemented event-driven accounting automation to synchronize invoices, payments, and deposits, ensuring accurate reconciliation across distributed financial systems.</li>
+<li><strong><code>LEADERSHIP</code></strong> Served as technical lead for the <strong>NetSuite Capital SuiteApp</strong>, aligning <strong>SuiteScript</strong> and <strong>REST</strong> integrations with backend services and enforcing integration contracts and data integrity.</li>
+</ul>
+<p><strong>Senior Developer - Lead - Core Processing Engine</strong> | <em>Oct 2022 – Feb 2025</em></p>
+<blockquote>
+<p><strong>MISSION:</strong> <em>End-to-end development of the Core Processing Engine—a bespoke, ledger-based trade finance accounting workflow tool.</em></p>
+</blockquote>
+<ul>
+<li><strong><code>FULL_STACK</code></strong> Led end-to-end development of a <strong>.NET 8</strong> <strong>Azure Application Service</strong> powering a bespoke, ledger-based trade finance accounting engine, with an <strong>Angular</strong> UI backed by a <strong>RESTful API</strong>.</li>
+<li><strong><code>AUTOMATION</code></strong> Architected and implemented the core automation and processing logic to drastically reduce operational costs, decoupling trade volume growth from manual operations.</li>
+<li><strong><code>LEDGER</code></strong> Designed a custom <strong>immutable ledger system</strong> to ensure accurate, auditable financial tracking across high-volume trade finance workflows.</li>
+<li><strong><code>REAL_TIME</code></strong> Implemented real-time system feedback and state propagation using <strong>Azure SignalR</strong>, enabling responsive UI updates during peak processing and settlement windows.</li>
+</ul>
+<div style="page-break-after: always;"></div>
+<p><strong>Senior Developer</strong> | <em>June 2020 – Oct 2022</em></p>
+<blockquote>
+<p><strong>MISSION:</strong> <em>Realized a greenfield Azure .NET infrastructure build-out to support the custom software needs of a growing trade finance Fintech.</em></p>
+</blockquote>
+<ul>
+<li><strong><code>GREENFIELD</code></strong> Architected the initial <strong>Azure .NET</strong> infrastructure from the ground up, establishing the foundation for all subsequent trade finance custom software.</li>
+<li><strong><code>INTEGRATION</code></strong> Built automated partner integrations (<strong>SAP Ariba, C2FO, NetSuite</strong>) to drive lead generation and document gathering, directly decreasing new customer acquisition costs.</li>
+<li><strong><code>RECOGNITION</code></strong> Technical lead for the SAP Ariba integration project, recognized as an <strong>SAP Pinnacle Awards Finalist</strong>.</li>
+</ul>
+<p><strong>GENERAL ELECTRIC (GE DIGITAL)</strong> <code>[INDUSTRIAL_IOT]</code>
+<strong>Software Engineer</strong> | <em>Nov 2016 – June 2020</em></p>
+<blockquote>
+<p><strong>MISSION:</strong> <em>Modernizing GE Power equipment tracking by building a temporal asset-attribute management tool to enable predictive maintenance.</em></p>
+</blockquote>
+<ul>
+<li><strong><code>FRAMEWORKS</code></strong> Developed the core platform using <strong>Spring Framework</strong>, utilizing <strong>Spring Security</strong> for RBAC and <strong>Spring Data</strong> for efficient persistence in a secure industrial environment.</li>
+<li><strong><code>REACTIVE</code></strong> Leveraged <strong>RxJava</strong> for extensive <strong>Reactive Programming</strong>, enabling highly responsive handling of asynchronous data streams and complex event propagation.</li>
+<li><strong><code>DATA</code></strong> Architected the data layer to ingest and serve critical equipment data from <strong>Oracle DB</strong> and <strong>Teradata</strong>, ensuring high fidelity for predictive maintenance models.</li>
+<li><strong><code>MODERNIZATION</code></strong> Replaced legacy tracking methods with a centralized <strong>Java/Kotlin</strong> and <strong>Angular</strong> platform, visualizing complex power generation asset hierarchies efficiently.</li>
+</ul>
+<p><strong>ANALYTIC STRATEGIES</strong> <code>[DEFENSE]</code>
+<strong>Software Test Automation Engineer</strong> | <em>May 2016 – Nov 2016</em></p>
+<blockquote>
+<p><strong>MISSION:</strong> <em>Modernization of US Navy software systems via automated quality assurance.</em></p>
+</blockquote>
+<ul>
+<li><strong><code>AUTOMATION</code></strong> Developed automated functional tests using <strong>Java, JUnit, and Selenium</strong> in a secure SCRUM environment.</li>
+</ul>
+<p><strong>JACOBS ENGINEERING GROUP</strong> <code>[ENERGY]</code>
+<strong>Project Engineer</strong> | <em>Sept 2011 – April 2015</em></p>
+<blockquote>
+<p><strong>MISSION:</strong> <em>Lead engineering for major subsea tie-back projects and offshore rig installations.</em></p>
+</blockquote>
+<ul>
+<li><strong><code>LEADERSHIP</code></strong> Mechanical engineering lead for blast wall installation projects on large offshore oil rigs.</li>
+<li><strong><code>MANAGEMENT</code></strong> Coordinated multiple engineering roles for subsea infrastructure projects.</li>
+</ul>
+<hr>
+<h3 id="03kernelinfo-education">// 03_KERNEL_INFO (EDUCATION)</h3>
+<p><strong>THE IRON YARD</strong>
+<code>Immersive Full Stack Engineering (Java), 2016</code></p>
+<p><strong>LOUISIANA STATE UNIVERSITY</strong>
+<code>B.S. Mechanical Engineering</code></p>
 
 </body>
-
 </html>

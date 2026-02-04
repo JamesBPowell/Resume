@@ -68,10 +68,10 @@
 
 > **MISSION:** *Modernizing GE Power equipment tracking by building a temporal asset-attribute management tool to enable predictive maintenance.*
 
-* **`TEMPORAL_DATA`** Engineered a complex **temporal asset management system**, enabling precise tracking of historic equipment configurations to analyze failures and predict maintenance needs.
-* **`MODERNIZATION`** Replaced legacy tracking methods with a centralized **Java/Kotlin** and **Angular** platform, ensuring accurate data availability for critical power infrastructure.
-* **`FULL_STACK`** Developed backend microservices and responsive frontend interfaces to visualize complex power generation asset hierarchies.
-* **`QUALITY`** Built proprietary API testing frameworks and maintained rigorous testing standards using **JUnit**, **Protractor**, and **Cypress** to ensure data integrity.
+* **`FRAMEWORKS`** Developed the core platform using **Spring Framework**, utilizing **Spring Security** for RBAC and **Spring Data** for efficient persistence in a secure industrial environment.
+* **`REACTIVE`** Leveraged **RxJava** for extensive **Reactive Programming**, enabling highly responsive handling of asynchronous data streams and complex event propagation.
+* **`DATA`** Architected the data layer to ingest and serve critical equipment data from **Oracle DB** and **Teradata**, ensuring high fidelity for predictive maintenance models.
+* **`MODERNIZATION`** Replaced legacy tracking methods with a centralized **Java/Kotlin** and **Angular** platform, visualizing complex power generation asset hierarchies efficiently.
 
 **ANALYTIC STRATEGIES** `[DEFENSE]`
 **Software Test Automation Engineer** | *May 2016 – Nov 2016*
