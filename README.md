@@ -39,17 +39,19 @@
 
 > **MISSION:** *Leading end-to-end development of the NetSuite Capital SuiteApp and backend integrations to enable seamless invoice financing.*
 
-* **`SUITEAPP`** Lead developer for the **NetSuite Capital SuiteApp**, delivering a native UI for customers to manage financing directly within their ERP.
-* **`AUTOMATION`** Engineered accounting automation workflows to synchronize financial data and streamline reconciliation between customer NetSuite accounts and Raistone.
-* **`BACKEND`** Architected the secure backend integration layer connecting the SuiteApp to Raistone’s core financing engine.
+* **`PLATFORM`** Led design and implementation of a scalable backend integration platform built on **.NET 8** and **Azure Functions**, enabling secure, high-volume invoice financing workflows between NetSuite and Raistone.
+* **`ARCHITECTURE`** Architected and owned the serverless integration layer responsible for orchestration, validation, and lifecycle management of financing transactions initiated from the **NetSuite Capital SuiteApp**.
+* **`AUTOMATION`** Designed and implemented event-driven accounting automation to synchronize invoices, payments, and deposits, ensuring accurate reconciliation across distributed financial systems.
+* **`LEADERSHIP`** Served as technical lead for the **NetSuite Capital SuiteApp**, aligning **SuiteScript** and **REST** integrations with backend services and enforcing integration contracts and data integrity.
 
 **Senior Developer - Lead - Core Processing Engine** | *Oct 2022 – Feb 2025*
 
 > **MISSION:** *End-to-end development of the Core Processing Engine—a bespoke, ledger-based trade finance accounting workflow tool.*
 
-* **`AUTOMATION`** Engineered the core automation logic to drastically reduce operational costs, decoupling trade volume growth from manual operational overhead.
-* **`LEDGER`** Designed the custom **ledger-based accounting system**, ensuring immutable financial tracking for high-volume trade finance workflows.
-* **`SCALE`** Built the engine on a robust **serverless** architecture to ensure high availability and precision during peak processing windows.
+* **`FULL_STACK`** Led end-to-end development of a **.NET 8** **Azure Application Service** powering a bespoke, ledger-based trade finance accounting engine, with an **Angular** UI backed by a **RESTful API**.
+* **`AUTOMATION`** Architected and implemented the core automation and processing logic to drastically reduce operational costs, decoupling trade volume growth from manual operations.
+* **`LEDGER`** Designed a custom **immutable ledger system** to ensure accurate, auditable financial tracking across high-volume trade finance workflows.
+* **`REAL_TIME`** Implemented real-time system feedback and state propagation using **Azure SignalR**, enabling responsive UI updates during peak processing and settlement windows.
 
 **Senior Developer** | *June 2020 – Oct 2022*
 
