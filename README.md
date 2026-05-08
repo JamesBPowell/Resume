@@ -1,22 +1,34 @@
 # [SYSTEM_PROFILE]: JAMES B. POWELL
-`ROLE: SENIOR SOFTWARE ENGINEER`
-`LOC: NEW ORLEANS, LA` | `WEB: LINKEDIN.COM/IN/JAMES-B-POWELL` | `MAIL: JAMES.POWELL@ALUMNI.LSU.EDU` | `TEL: 985-774-5971`
+`ROLE: PRINCIPAL SOFTWARE ENGINEER`
+`LOC: NEW ORLEANS, LA` | `WEB: LINKEDIN.COM/IN/JAMES-B-POWELL` | `MAIL: JAMESBEDLEPOWELL@GMAIL.COM` | `TEL: 985-774-5971`
 
 ---
 
 ### // 01_SYSTEM_ARCHITECTURE (SKILLS)
 
 
-| **CORE STACK** | **INFRASTRUCTURE (AZURE)** | **DATA & SECURITY** |
+| **CORE STACK** | **INFRASTRUCTURE** | **DATA & SECURITY** |
 | :--- | :--- | :--- |
-| .NET 8 / C# | Functions / App Service / WebJobs | SQL Server / Table / Blob Storage |
-| Java (Spring Boot) | Service Bus / SignalR / APIM | Entra ID / B2C / Private Endpoints |
-| Angular / TypeScript | Front Door / Firewall / VPN Gateway | Docker / Azure DevOps / Pipelines |
-| SuiteScript | Application Insights / Log Analytics | Bicep / Microservices / Event-Driven |
+| .NET 8 / C# / Express | Azure (Functions / WebJobs) | SQL Server / Redis / BullMQ |
+| Java (Spring Boot) | Jenkins / Portainer / Pipelines | Table / Blob / Oracle Storage |
+| Angular / TypeScript | Service Bus / SignalR / APIM | Entra ID / B2C / Private Endpoints |
+| SuiteScript | Front Door / App Insights | Docker / Bicep / Event-Driven |
 
 ---
 
 ### // 02_EXECUTION_LOG (EXPERIENCE)
+
+**IONFI** `[FINTECH]`
+
+**Principal Software Engineer** | *March 2026 – Present*
+
+> **MISSION:** *Facilitating cross-border wire transfers by providing a comprehensive AML/KYC compliance workflow that offloads regulatory burdens from upstream partner banks.*
+
+* **`OWNERSHIP`** Exercising full technical ownership of the core platform, managing the complete software lifecycle across an **Angular** and **Express** stack.
+* **`STACK`** Orchestrates containerized deployments using **Portainer** and leverages **BullMQ** with **Redis** for robust, asynchronous task processing and background job management.
+* **`INTEGRATION`** Engineered a hybrid integration strategy, combining bespoke bank-specific connections with a unified abstraction layer via **Braid** to streamline upstream bank connectivity.
+* **`COMPLIANCE`** Developed and maintains a high-integrity anti-money-laundering (AML) and Know Your Customer (KYC) workflow, enabling the Ionfi compliance team to perform rigorous due diligence on international transfers.
+* **`DEVOPS`** Manages continuous integration and delivery pipelines through **Jenkins**, ensuring stable and repeatable deployments of critical financial infrastructure.
 
 **RAISTONE CAPITAL** `[FINTECH]`
 
